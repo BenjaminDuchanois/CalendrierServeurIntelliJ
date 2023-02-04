@@ -5,8 +5,6 @@ import df.Jersey.element.RendezVous;
 
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
-import java.lang.reflect.Array;
-import java.util.Arrays;
 
 @Path("/rdv")
 public class Calendrier {
@@ -22,14 +20,7 @@ public class Calendrier {
     @Path("/get/{idRdv}")
     @Produces ( MediaType.APPLICATION_JSON )
     public RendezVous getRdv(@PathParam("idRdv") int idRdv) {
-        return Database.liste[idRdv];
-    }
-
-    @GET
-    @Path("/getall")
-    @Produces ( MediaType.APPLICATION_JSON )
-    public String getListeRdv() {
-        return Database.liste.toString();
+        return Database.liste.get(idRdv);
     }
 
     @PUT
@@ -37,8 +28,8 @@ public class Calendrier {
     @Consumes( MediaType.APPLICATION_JSON )
     @Produces ( MediaType.TEXT_PLAIN )
     public boolean updateRdv(RendezVous rdv) {
-        System.out.println( "Receive update for " + rdv);
-        Database.liste[rdv.getIdRdv()] = rdv;
+        System.out.println( "Reçu : Modification de rdv :" + rdv);
+        Database.liste.set(rdv.getIdRdv(), rdv);
         return true;
     }
 
@@ -47,11 +38,22 @@ public class Calendrier {
     @Consumes( MediaType.APPLICATION_JSON )
     @Produces ( MediaType.TEXT_PLAIN )
     public boolean addRdv(RendezVous rdv) {
-        System.out.println( "Receive new rdv :" + rdv);
-        rdv.setIdRdv(Database.taille);
-        Database.taille++;
-        Database.liste = Arrays.copyOf(Database.liste, Database.taille);
-        Database.liste[Database.taille-1] = rdv;
+        System.out.println( "Reçu : Ajout de rdv :" + rdv);
+        int newId = Database.taille;
+        rdv.setIdRdv(newId);
+        Database.liste.add(rdv);
+        Database.taille = Database.liste.size();
+        return true;
+    }
+
+    @PUT
+    @Path("/del")
+    @Consumes( MediaType.APPLICATION_JSON )
+    @Produces ( MediaType.TEXT_PLAIN )
+    public boolean delRdv(RendezVous rdv) {
+        System.out.println( "Reçu : Suppression de rdv :" + rdv);
+        Database.liste.remove(rdv.getIdRdv());
+        Database.taille = Database.liste.size();
         return true;
     }
 
