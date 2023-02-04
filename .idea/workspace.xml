@@ -176,7 +176,7 @@
       <workItem from="1674947056764" duration="472000" />
       <workItem from="1674947859421" duration="21509000" />
       <workItem from="1675069645249" duration="7293000" />
-      <workItem from="1675518769118" duration="5882000" />
+      <workItem from="1675518769118" duration="6887000" />
     </task>
     <task id="LOCAL-00001" summary="Initialisation Projet ASI">
       <created>1673880999445</created>
@@ -199,7 +199,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675528891911</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Changement de Tab en ArrayList, et gestion des Supressions de rdv">
+      <created>1675553165601</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1675553165601</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

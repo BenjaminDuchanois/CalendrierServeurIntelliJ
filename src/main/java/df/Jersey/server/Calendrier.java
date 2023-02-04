@@ -52,17 +52,7 @@ public class Calendrier {
     @Produces ( MediaType.TEXT_PLAIN )
     public boolean delRdv(RendezVous rdv) {
         System.out.println("Reçu suppression pour :" + rdv);
-        int index = -1;
-        for (int i = 0; i < Database.liste.size(); i++) {
-            if (Database.liste.get(i).getIdRdv() == rdv.getIdRdv()) {
-                index = i;
-                break;
-            }
-        }
-        if (index == -1) {
-            return false;
-        }
-        Database.liste.remove(index);
+        Database.liste.remove(rdv.getIdRdv());
         Database.taille--;
         return true;
     }
