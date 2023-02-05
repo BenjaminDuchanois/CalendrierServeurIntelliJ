@@ -2,7 +2,7 @@
 
 Pour déployer correctement le projet coté serveur :
 
-  1 - Aller dans src/main/resources/database.ser 
+  1 - Aller dans src/main/java/df.Jersey/element/Database.java 
   
   2 - Remplacer le PATH absolue déja présent par le vôtre ( en vous assurant d'avoir une syntaxe correspondant à votre OS )
 
