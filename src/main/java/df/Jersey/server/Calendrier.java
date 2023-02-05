@@ -13,6 +13,8 @@ public class Calendrier {
     @Path("/getNbRdv")
     @Produces ( MediaType.APPLICATION_JSON )
     public int getNbRdv() {
+        //Synchronise la Database avec la sauvegarde
+        Database.loadFromFile();
         return Database.taille;
     }
 
@@ -30,6 +32,7 @@ public class Calendrier {
     public boolean updateRdv(RendezVous rdv) {
         System.out.println( "Reçu : Modification de rdv :" + rdv);
         Database.liste.set(rdv.getIdRdv(), rdv);
+        Database.saveToFile();
         return true;
     }
 
@@ -43,6 +46,7 @@ public class Calendrier {
         rdv.setIdRdv(newId);
         Database.liste.add(rdv);
         Database.taille = Database.liste.size();
+        Database.saveToFile();
         return true;
     }
 
@@ -54,6 +58,7 @@ public class Calendrier {
         System.out.println("Reçu suppression pour :" + rdv);
         Database.liste.remove(rdv.getIdRdv());
         Database.taille--;
+        Database.saveToFile();
         return true;
     }
 
