@@ -5,8 +5,8 @@ Pour déployer correctement le projet coté serveur :
   1 - Aller dans src/main/resources/database.ser 
   
   2 - Remplacer le PATH absolue déja présent par le vôtre ( en vous assurant d'avoir une syntaxe correspondant à votre OS )
-  
-  https://cdn.discordapp.com/attachments/1023254766438064239/1071799864138145872/image.png
+
+![image](https://user-images.githubusercontent.com/93995072/216826142-d592d53f-a213-4678-a0de-b6e71dfede48.png)
   
   3 - Lancer le serveur
   
