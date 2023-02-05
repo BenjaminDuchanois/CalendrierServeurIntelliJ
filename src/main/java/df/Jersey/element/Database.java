@@ -1,16 +1,29 @@
 package df.Jersey.element;
 
+import java.io.*;
 import java.util.ArrayList;
 
 public class Database {
-
+    public static int taille = 0;
     public static ArrayList<RendezVous> liste = new ArrayList<>();
 
-    static {
-        liste.add(new RendezVous(0, "CM ASI", "CM de 2h avec decouverte de matière", 0, 8, 30));
-        liste.add(new RendezVous(1, "Entretien CGI", "Entretien avec la CGI au siège principal", 1, 10, 30));
-        liste.add(new RendezVous(2, "Dejeuner", "Pause dejeuner", 3, 12, 0));
+    public static void saveToFile() {
+        try (FileOutputStream fos = new FileOutputStream("C:\\Users\\pc\\IdeaProjects\\CalendrierServeur\\src\\main\\resources\\database.ser");
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            oos.writeObject(liste);
+            System.out.println("Message enregistré");
+        } catch (IOException e) {
+            System.out.println("Pas enregistré");
+            e.printStackTrace();
+        }
     }
 
-    public static int taille = liste.size();
+    public static void loadFromFile() {
+        try (ObjectInputStream ois = new ObjectInputStream(new FileInputStream("C:\\Users\\pc\\IdeaProjects\\CalendrierServeur\\src\\main\\resources\\database.ser"))) {
+            Database.liste = (ArrayList<RendezVous>) ois.readObject();
+            Database.taille = Database.liste.size();
+        } catch (IOException | ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 }
