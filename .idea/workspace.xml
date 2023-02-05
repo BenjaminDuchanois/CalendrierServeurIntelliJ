@@ -9,11 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ee057483-3df0-4696-b157-9edb04972ca4" name="Changes" comment="Ajout de la sérialization et désérialization">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/df/Jersey/element/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/df/Jersey/element/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/df/Jersey/server/Calendrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/df/Jersey/server/Calendrier.java" afterDir="false" />
-    </list>
+    <list default="true" id="ee057483-3df0-4696-b157-9edb04972ca4" name="Changes" comment="Remplissage de la bdd et signature" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -178,7 +174,7 @@
       <workItem from="1674947056764" duration="472000" />
       <workItem from="1674947859421" duration="21509000" />
       <workItem from="1675069645249" duration="7293000" />
-      <workItem from="1675518769118" duration="20271000" />
+      <workItem from="1675518769118" duration="20570000" />
     </task>
     <task id="LOCAL-00001" summary="Initialisation Projet ASI">
       <created>1673880999445</created>
@@ -229,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1675564890899</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Remplissage de la bdd et signature">
+      <created>1675609789107</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675609789107</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,6 +254,7 @@
     <MESSAGE value="Changement de Tab en ArrayList, et gestion des Supressions de rdv" />
     <MESSAGE value="Correction de bug d'ID lors des suppressions" />
     <MESSAGE value="Ajout de la sérialization et désérialization" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout de la sérialization et désérialization" />
+    <MESSAGE value="Remplissage de la bdd et signature" />
+    <option name="LAST_COMMIT_MESSAGE" value="Remplissage de la bdd et signature" />
   </component>
 </project>
