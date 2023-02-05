@@ -1,5 +1,16 @@
 package df.Jersey.server;
 
+/*
+    PROGRAMME pour le PROJET d'ASI
+    COTE SERVEUR
+    DUCHANOIS Benjamin
+    JORGE William
+    Master 1 Informatique
+
+    Pour accèder à la base de données, penser à changer le chemin du fichier
+    Database.java -> path
+ */
+
 import df.Jersey.element.Database;
 import df.Jersey.element.RendezVous;
 
@@ -9,6 +20,7 @@ import javax.ws.rs.core.MediaType;
 @Path("/rdv")
 public class Calendrier {
 
+    //Retourne le nombre de Rendez-vous enregistrés
     @GET
     @Path("/getNbRdv")
     @Produces ( MediaType.APPLICATION_JSON )
@@ -18,6 +30,7 @@ public class Calendrier {
         return Database.taille;
     }
 
+    //Retourne les informations du "idRdv"ème RendezVous
     @GET
     @Path("/get/{idRdv}")
     @Produces ( MediaType.APPLICATION_JSON )
@@ -25,6 +38,7 @@ public class Calendrier {
         return Database.liste.get(idRdv);
     }
 
+    //Met à jour le rendez vous reçu avec ses nouvelles valeurs
     @PUT
     @Path("/update")
     @Consumes( MediaType.APPLICATION_JSON )
@@ -36,6 +50,7 @@ public class Calendrier {
         return true;
     }
 
+    //Ajoute le rendez vous reçu
     @PUT
     @Path("/add")
     @Consumes( MediaType.APPLICATION_JSON )
@@ -50,6 +65,7 @@ public class Calendrier {
         return true;
     }
 
+    //Supprime le rdv reçu
     @PUT
     @Path("/del")
     @Consumes( MediaType.APPLICATION_JSON )

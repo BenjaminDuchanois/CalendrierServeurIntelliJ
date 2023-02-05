@@ -12,7 +12,6 @@
     <list default="true" id="ee057483-3df0-4696-b157-9edb04972ca4" name="Changes" comment="Ajout de la sérialization et désérialization">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/df/Jersey/element/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/df/Jersey/element/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/df/Jersey/element/RendezVous.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/df/Jersey/element/RendezVous.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/df/Jersey/server/Calendrier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/df/Jersey/server/Calendrier.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -179,7 +178,7 @@
       <workItem from="1674947056764" duration="472000" />
       <workItem from="1674947859421" duration="21509000" />
       <workItem from="1675069645249" duration="7293000" />
-      <workItem from="1675518769118" duration="16850000" />
+      <workItem from="1675518769118" duration="20271000" />
     </task>
     <task id="LOCAL-00001" summary="Initialisation Projet ASI">
       <created>1673880999445</created>
@@ -216,7 +215,21 @@
       <option name="project" value="LOCAL" />
       <updated>1675553989783</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Ajout de la sérialization et désérialization">
+      <created>1675564828667</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675564828667</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Ajout de la sérialization et désérialization">
+      <created>1675564890899</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675564890899</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
